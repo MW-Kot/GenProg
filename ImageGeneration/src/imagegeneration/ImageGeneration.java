@@ -50,7 +50,9 @@ public class ImageGeneration extends Application {
         grid.setHgap(10);
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 25));
-        grid.setStyle("-fx-background-color: 34,38,44");
+        
+        //grid.setStyle("-fx-background-color: 34,38,44");
+        //grid.setId("GridPane");
 
 
         
@@ -59,7 +61,9 @@ public class ImageGeneration extends Application {
         //Group root = new Group();
         Rectangle2D bounds = Screen.getPrimary().getVisualBounds();
         Scene scene = new Scene(grid, bounds.getWidth()/2, bounds.getHeight()/2, bg);
-
+        
+        scene.getStylesheets().add("imagegeneration/imgGenSS.css");
+        
         Text info = new Text("Select a button below to generate an image map.");
         info.setX(bounds.getWidth()/5);
         info.setY(bounds.getHeight()/5);
@@ -69,7 +73,25 @@ public class ImageGeneration extends Application {
         
         
         Button btn = new Button();
-        btn.setText("Say 'Hello World'");
+        btn.setText("This is a Button");
+//        btn.setStyle
+//        (
+//                " -fx-background-color: 121, 152, 255;\n"
+//                //+ "        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),\n"
+//                //+ "        linear-gradient(#20262b, #191d22),\n"
+//                //+ "        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));\n"
+//                + "    -fx-background-radius: 5,4,3,5;\n"
+//                + "    -fx-background-insets: 0,1,2,0;\n"
+//                + "    -fx-text-fill: white;\n"
+//                + "    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );\n"
+//                + "    -fx-font-family: \"Ubuntu\";\n"
+//                + "    -fx-text-fill: linear-gradient(white, #d0d0d0);\n"
+//                + "    -fx-font-size: 20px;\n"
+//                + "    -fx-font-weight: bold;\n"
+//                + "    -fx-padding: 10 20 10 20;"
+//        );
+
+
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
